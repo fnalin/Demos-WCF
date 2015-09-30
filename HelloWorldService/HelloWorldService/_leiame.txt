@@ -1,0 +1,32 @@
+﻿** Instruções para criar esse serviço **
+
+-- Parte I --
+1. Crie um novo projeto - C# | WCF | WCF Service Library
+2. Execute o projeto - será inciado o WCF Service Host para hospedar o seu serviço e o  WCF Test Client, para consumí-lo
+3. Teste os métodos GetData() e GetDataUsingDataContract()
+4. Verifique o IService1.cs - contém o contrato do serviço e a classe de dados
+5. Verifique o Service1.cs - implementa os métodos do contrato
+
+
+-- Parte II --
+1. Exclua IService1 e Service1
+2. Crie a classe HelloWorldService
+3. Utilizando somente esse arquivo, sem complicações, crie dentro do mesmo:
+	3.1 Classe pública Name, decorada com [DataContract], com as propriedades do tipo string First e Last, ambas decoradas com [DataMember]
+	3.2 Interface pública IHelloWorld, decorada com [ServiceContract] e com o método que retorna uma string SayHello e que recebe um parâmetro do tipo Name chamado person, decore com [OperationContract]
+4. Implemente o método SayHello da interface na classe HelloWorldService
+
+-- Parte III --
+1. Abra o app.config
+2. Dentro de services altere o name substituindo o Service1 pelo serviço HelloWorldService.HelloWorldService
+3. Em base address altere para um mais amigável (http://localhost:8080/helloworld)
+4. Altere o endpoint para o contrato IHelloWorld e triplique-o
+5. EndPoints: 
+	<endpoint address="ws" binding="wsHttpBinding" contract="HelloWorldService.IHelloWorld"/>
+	<endpoint address="basic" binding="basicHttpBinding" contract="HelloWorldService.IHelloWorld"/>
+	<endpoint address="net.tcp://localhost:8081/helloworld" binding="netTcpBinding" contract="HelloWorldService.IHelloWorld"/>
+6. Execute o projeto e teste-o pelo WCF Test Client
+7. Execute no browser o endereço http://localhost:8080/helloworld e teste o wsdl e o singlewsdl
+
+
+*** FIM! ***

@@ -1,0 +1,35 @@
+﻿** Instruções para criar o cliente que consumirá o serviço **
+
+-- Parte I --
+1. Vá em Add Service Reference
+2. Coloque o endereço do metadado (http://localhost:8080/helloworld/mex) e cliqque em "Go"
+3. Coloque um nome para o Proxy em namespace (ex. ServicoHelloWorld
+
+-- Parte II --
+1. Explore o proxy com 2 cliques e abra a árvore do mesmo
+2. Dentro de Client.ServicoHelloWorld, está o HelloWorldClient --> ele será o contexto dos métodos no serviço
+
+-- Parte III --
+1. Desative o WCF Test Client da aplicação do serviço:
+	1.1 Vá nas propriedades do projeto
+	1.2 Na guia Debug, em Command Line Arguments, subistitua /client:"WcfTestClient.exe" por /client:"Client.exe"
+	1.3 Em Working Directory, coloque o caminho da pasta Debug do projeto cliente (Ex.: C:\Projetos\Demos\WCF\HelloWorldService\Client\bin\Debug\)
+
+-- Parte IV --
+1. Instancie o proxy utilizando um dos endpoints como parâmetro no construtor
+2. Consuma o método do serviço
+3. Finalize a instância com o dispose ou utilize o using
+
+-- Código Ex --
+	string retorno;
+
+	using (var _proxy = new ServicoHelloWorld.HelloWorldClient("WSHttpBinding_IHelloWorld"))
+	{
+		var person = new Servico.Name { First="Fabiano", Last="Teste do WSHttp"};
+		retorno = _proxy.SayHello(person);
+	}
+
+	Console.WriteLine(retorno);
+
+	Console.WriteLine("FIM");
+	Console.ReadLine();
