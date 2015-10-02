@@ -1,0 +1,41 @@
+﻿@model IEnumerable<DemoWCFSingleton.WebUI.Models.AlunoVM>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Listagem de alunos vindo do WS</h2>
+
+<div role="alert" class="alert alert-warning alert-dismissible fade in">
+    <button aria-label="Close" data-dismiss="alert" class="close" type="button"><span aria-hidden="true">×</span></button>
+    <strong>Atenção rapaz!</strong> Utilize o WCFTestClient para adicionar alunos.
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cadastro)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cadastro)
+        </td>
+    </tr>
+}
+
+</table>
