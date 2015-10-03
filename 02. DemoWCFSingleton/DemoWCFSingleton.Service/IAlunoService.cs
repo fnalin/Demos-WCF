@@ -6,7 +6,7 @@ namespace DemoWCFSingleton.Service
     [ServiceContract]
     public interface IAlunoService
     {
-        [OperationContract]
+        [OperationContract(IsOneWay = true)]
         void AdicionarAluno(AlunoModel aluno);
         [OperationContract]
         IList<AlunoModel> ObterAlunos();
