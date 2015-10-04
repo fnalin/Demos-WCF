@@ -1,0 +1,12 @@
+﻿** O intuito desse projeto é consumir o serviço utilizando o svcutil.exe para criar o Proxy **
+
+1. Crie um projeto do tipo console
+2. Adicione referencia ao System.ServiceModel e System.Runtime.Serialization
+3. Abra o promtp de comando do VSStudio. Ex do 2013 (iniciar / programas / visual studio 2013 / visual studio tools / Developer Command Prompt for VS2013)
+4. Vá até a pasta da Demo do cliente
+5. Com o serviço rodando, digite svcutil [url do mex | wsdl]. Ex: svcutil http://localhost:8080/AniversariantesService/mex
+6. Adicione ao projeto cliente os doi arquivos gerados
+7. Renomeie o arquivi output.config para app.config
+8. Digite o código do cliente (Veja nessa app)
+
+Pronto!
