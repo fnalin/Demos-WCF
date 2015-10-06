@@ -12,6 +12,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemosClient.ClienteAddServR
 		{3B4B593B-8C89-47DE-B7C2-C5406A705690} = {3B4B593B-8C89-47DE-B7C2-C5406A705690}
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clientes", "Clientes", "{584766F5-9FFE-4D6F-84F8-BFB2CDDC9DF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemosClient.ClienteViaChannel", "DemosClient.ClienteViaChannel\DemosClient.ClienteViaChannel.csproj", "{C2969D50-4366-4B31-86B9-54D2AB1FC517}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3B4B593B-8C89-47DE-B7C2-C5406A705690} = {3B4B593B-8C89-47DE-B7C2-C5406A705690}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,8 +37,17 @@ Global
 		{EDD56645-97EA-4FE3-BAB9-3173C1FEDDC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDD56645-97EA-4FE3-BAB9-3173C1FEDDC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDD56645-97EA-4FE3-BAB9-3173C1FEDDC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2969D50-4366-4B31-86B9-54D2AB1FC517}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2969D50-4366-4B31-86B9-54D2AB1FC517}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2969D50-4366-4B31-86B9-54D2AB1FC517}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2969D50-4366-4B31-86B9-54D2AB1FC517}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4664BB7E-05CD-48BA-BA5C-7D3B45F4E1C6} = {584766F5-9FFE-4D6F-84F8-BFB2CDDC9DF8}
+		{EDD56645-97EA-4FE3-BAB9-3173C1FEDDC6} = {584766F5-9FFE-4D6F-84F8-BFB2CDDC9DF8}
+		{C2969D50-4366-4B31-86B9-54D2AB1FC517} = {584766F5-9FFE-4D6F-84F8-BFB2CDDC9DF8}
 	EndGlobalSection
 EndGlobal
