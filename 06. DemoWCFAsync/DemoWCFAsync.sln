@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoWCFAsync.Service", "DemoWCFAsync.Service\DemoWCFAsync.Service.csproj", "{11834D3B-4D8C-4164-8F7A-4FF90A631CDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoWCFAsync.Cliente", "DemoWCFAsync.Cliente\DemoWCFAsync.Cliente.csproj", "{78053A3E-FFA9-43C0-A180-F76A61AE125F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{11834D3B-4D8C-4164-8F7A-4FF90A631CDD} = {11834D3B-4D8C-4164-8F7A-4FF90A631CDD}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11834D3B-4D8C-4164-8F7A-4FF90A631CDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11834D3B-4D8C-4164-8F7A-4FF90A631CDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11834D3B-4D8C-4164-8F7A-4FF90A631CDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11834D3B-4D8C-4164-8F7A-4FF90A631CDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78053A3E-FFA9-43C0-A180-F76A61AE125F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78053A3E-FFA9-43C0-A180-F76A61AE125F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78053A3E-FFA9-43C0-A180-F76A61AE125F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78053A3E-FFA9-43C0-A180-F76A61AE125F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
