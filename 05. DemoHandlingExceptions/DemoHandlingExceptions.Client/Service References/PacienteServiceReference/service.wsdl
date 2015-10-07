@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PacienteService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/DemoHandlingExceptions.Service" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPacienteService_Adicionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Adicionar" />
+  </wsdl:message>
+  <wsdl:message name="IPacienteService_Adicionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdicionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPacienteService_Editar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Editar" />
+  </wsdl:message>
+  <wsdl:message name="IPacienteService_Editar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPacienteService_Excluir_InputMessage">
+    <wsdl:part name="parameters" element="tns:Excluir" />
+  </wsdl:message>
+  <wsdl:message name="IPacienteService_Excluir_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExcluirResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPacienteService_ObterPorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterPorID" />
+  </wsdl:message>
+  <wsdl:message name="IPacienteService_ObterPorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterPorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPacienteService_ObterTodos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterTodos" />
+  </wsdl:message>
+  <wsdl:message name="IPacienteService_ObterTodos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterTodosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPacienteService">
+    <wsdl:operation name="Adicionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPacienteService/Adicionar" message="tns:IPacienteService_Adicionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPacienteService/AdicionarResponse" message="tns:IPacienteService_Adicionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Editar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPacienteService/Editar" message="tns:IPacienteService_Editar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPacienteService/EditarResponse" message="tns:IPacienteService_Editar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Excluir">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPacienteService/Excluir" message="tns:IPacienteService_Excluir_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPacienteService/ExcluirResponse" message="tns:IPacienteService_Excluir_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterPorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPacienteService/ObterPorID" message="tns:IPacienteService_ObterPorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPacienteService/ObterPorIDResponse" message="tns:IPacienteService_ObterPorID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterTodos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPacienteService/ObterTodos" message="tns:IPacienteService_ObterTodos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPacienteService/ObterTodosResponse" message="tns:IPacienteService_ObterTodos_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPacienteService" type="tns:IPacienteService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Adicionar">
+      <soap:operation soapAction="http://tempuri.org/IPacienteService/Adicionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Editar">
+      <soap:operation soapAction="http://tempuri.org/IPacienteService/Editar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Excluir">
+      <soap:operation soapAction="http://tempuri.org/IPacienteService/Excluir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterPorID">
+      <soap:operation soapAction="http://tempuri.org/IPacienteService/ObterPorID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterTodos">
+      <soap:operation soapAction="http://tempuri.org/IPacienteService/ObterTodos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PacienteService">
+    <wsdl:port name="BasicHttpBinding_IPacienteService" binding="tns:BasicHttpBinding_IPacienteService">
+      <soap:address location="http://localhost:8080/PacienteService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
