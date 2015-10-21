@@ -1,0 +1,2 @@
+﻿- Para se ter o serviço hospedado no IIS, utiize o template "WCF Service Application"
+- Para criar um novo svc, Add New Item / WCF Service
